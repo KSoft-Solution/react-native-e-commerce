@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
-import { Products, Carts } from "./pages";
+import { Products, Carts, ProductDetail, CategoryProduct } from "./pages";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -14,7 +14,8 @@ const StackRoute = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="ProductScreen" component={Products} />
-      <Stack.Screen name="CartScreen" component={Carts} />
+      <Stack.Screen name="DetailsScreen" component={ProductDetail} />
+      <Stack.Screen name="categoryProductsScreen" component={CategoryProduct} />
     </Stack.Navigator>
   );
 };

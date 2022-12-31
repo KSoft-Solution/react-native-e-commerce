@@ -34,7 +34,8 @@
     "redux-batched-subscribe": "^0.1.6",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.2",
-    "waait": "^1.0.5"
+    "waait": "^1.0.5",
+    "@react-native-async-storage/async-storage": "~1.17.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

@@ -5,6 +5,11 @@ export const productServices = {
   getAllProducts: () => {
     return axios.get(product_Path).then((res) => res);
   },
+  getCategoryProduct: (category_name) => {
+    return axios
+      .get(`${product_Path}/category/${category_name}`)
+      .then((res) => res);
+  },
   getProductDetail: (id) => {
     return axios.get(product_Path + `${id}`).then((res) => res.data);
   },
