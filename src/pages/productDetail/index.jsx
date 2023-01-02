@@ -16,7 +16,7 @@ function ProductDetails(props) {
   return (
     <DetailsItem
       item={item}
-    //   AddToCart={() => dispatch({ type: "ADD_TO_CART", payload: { item } })}
+      AddToCart={() => dispatch({ type: "ADD_TO_CART", payload: { item } })}
       onLike={() => {
         updateStorageItem(item);
         setisPressed(true);

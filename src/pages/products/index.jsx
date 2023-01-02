@@ -21,6 +21,9 @@ export default function Products(props) {
   if (error) {
     return <Error />;
   }
+  if (products) {
+    dispatch({ type: "SET_PRODUCTS", payload: products });
+  }
 
   const renderProduct = ({ item }) => (
     <ProductItem
