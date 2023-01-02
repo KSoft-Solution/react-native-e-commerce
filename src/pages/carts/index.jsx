@@ -4,7 +4,7 @@ import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import { useSelector, useDispatch } from "react-redux";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CustomButton, Header, Footer } from "../../components";
-import { OrderHistory } from "./components";
+import { OrderHistory,CartItem } from "./components";
 import { cart_list } from "./components/styles";
 
 const Carts = (props) => {
@@ -19,7 +19,7 @@ const Carts = (props) => {
       orders = JSON.parse(orders);
     }
     orders.push({
-      Order: cartlist.map((item) => item.title),
+      Order: cart.map((item) => item.title),
       TotalPrice: total,
     });
     orders = JSON.stringify(orders);
@@ -46,7 +46,7 @@ const Carts = (props) => {
         <FlatList
           ListHeaderComponent={renderHeader}
           keyExtractor={(_, i) => i.toString()}
-          data={cartlist}
+          data={cart}
           renderItem={renderCart}
           ListEmptyComponent={
             <View style={cart_list.emptyList_container}>
